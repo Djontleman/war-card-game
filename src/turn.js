@@ -31,3 +31,5 @@ Turn.prototype.startTurn = function() {
         this.player2.addCardToBottomOfDeck(player2Card);
     }
 }
+
+module.exports = Turn;
