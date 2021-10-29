@@ -1,13 +1,9 @@
 // ====== Card Class ====== //
 
-// const Card = function(suit, value, name){
-//     this.suit = suit;
-//     this.value = value;
-//     this.name = name;
-// }
-
-const Card = function(value) {
+const Card = function(value, suit, name) {
     this.value = value;
+    this.suit = suit;
+    this.name = name;
 }
 
 module.exports = Card;
