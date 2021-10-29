@@ -1,7 +1,5 @@
 // ====== Hand Class ====== //
 
-const Card = require("../card.js");
-
 const Hand = function() {
     this.card = [];
 }

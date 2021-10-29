@@ -1,6 +1,6 @@
 // ====== Standard Deck ====== //
 
-const Card = require("../card");
+const Card = require("./card");
 
 const StandardDeck = function() {
     this.standardDeck = [Card(1, "Hearts", "Ace"),  Card(1, "Diamonds", "Ace"), Card(1, "Spades", "Ace"), Card(1, "Clubs", "Ace"),
