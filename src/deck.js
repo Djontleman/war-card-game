@@ -2,7 +2,7 @@
 
 const Deck = function() {
     this.deck = [];
-    this.numberOfCards = this.deck.length;
+    // this.numberOfCards = this.deck.length;
 }
 
 Deck.prototype.addCardToBottomOfDeck = function(card) {
@@ -10,7 +10,7 @@ Deck.prototype.addCardToBottomOfDeck = function(card) {
 }
 
 Deck.prototype.removeCardFromTopOfDeck = function() {
-    this.deck.pop();
+    return this.deck.pop();
 }
 
 module.exports = Deck;

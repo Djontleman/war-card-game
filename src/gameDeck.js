@@ -8,10 +8,10 @@ const GameDeck = function() {
 }
 
 GameDeck.prototype.buildDeck = function() {
-    // const standardDeck = new StandardDeck(); 
-    // this.deck = standardDeck.deck;
+    const standardDeck = new StandardDeck(); 
+    this.deck = standardDeck.standardDeck;
 
-    this.deck = new StandardDeck.deck;
+    // this.deck = new StandardDeck.deck;
 }
 
 // todo: make shuffledDeck and unshuffledDeck Deck objects
@@ -22,7 +22,7 @@ GameDeck.prototype.shuffleDeck = function() {
     while(unshuffledDeck.length > 0) {
         let randomNum = Math.floor(Math.random() * unshuffledDeck.length);
         let randomCard = unshuffledDeck[randomNum];
-        unshuffledDeck.splice(randomNum);
+        unshuffledDeck.splice(randomNum, 1);
         shuffledDeck.push(randomCard);
     }
 
