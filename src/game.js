@@ -25,7 +25,7 @@ Game.prototype.start = function() {
 
     this.dealCards();
 
-    i = 20;
+    // i = 20;
     do {
         const stage = new Stage;
         const turn = new Turn(this.player1, this.player2, stage);
@@ -38,10 +38,10 @@ Game.prototype.start = function() {
         } 
         console.log(this.player2.deck.cards.length)
         
-        i--;
-        if (i == 0) {
-            break;
-        }
+        // i--;
+        // if (i == 0) {
+        //     break;
+        // }
 
     } while (this.winner == null);
 
