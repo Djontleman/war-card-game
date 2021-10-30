@@ -25,23 +25,23 @@ Game.prototype.start = function() {
 
     this.dealCards();
 
-    // i = 20;
+    i = 20;
     do {
         const stage = new Stage;
         const turn = new Turn(this.player1, this.player2, stage);
         turn.startTurn();
 
-        if (this.player1.deck.deck.length == 0) {
+        if (this.player1.deck.cards.length == 0) {
             this.winner = this.player2;
-        } else if (this.player2.deck.deck.length == 0) {
+        } else if (this.player2.deck.cards.length == 0) {
             this.winner = this.player1;
         } 
-        console.log(this.player2.deck.deck.length)
+        console.log(this.player2.deck.cards.length)
         
-        // i--;
-        // if (i == 0) {
-        //     break;
-        // }
+        i--;
+        if (i == 0) {
+            break;
+        }
 
     } while (this.winner == null);
 
@@ -52,12 +52,12 @@ Game.prototype.dealCards = function() {
     const gameDeck = new GameDeck;
     gameDeck.buildDeck();
     gameDeck.shuffleDeck();
-    for (i = 0; i < gameDeck.deck.length; i++) {
+    for (i = 0; i < gameDeck.cards.length; i++) {
         if (i % 2 == 0) {
-            this.player1.addCardToBottomOfDeck(gameDeck.deck[i]);
+            this.player1.addCardToBottomOfDeck(gameDeck.cards[i]);
             // console.log(this.player1.deck)
         } else {
-            this.player2.addCardToBottomOfDeck(gameDeck.deck[i]);
+            this.player2.addCardToBottomOfDeck(gameDeck.cards[i]);
         }
     }
 }

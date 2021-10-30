@@ -9,24 +9,24 @@ const GameDeck = function() {
 
 GameDeck.prototype.buildDeck = function() {
     const standardDeck = new StandardDeck(); 
-    this.deck = standardDeck.standardDeck;
+    this.cards = standardDeck.cards;
 
     // this.deck = new StandardDeck.deck;
 }
 
 // todo: make shuffledDeck and unshuffledDeck Deck objects
 GameDeck.prototype.shuffleDeck = function() {
-    const unshuffledDeck = this.deck;
-    const shuffledDeck = [];
+    const unshuffledCards = this.cards;
+    const shuffledCards = [];
 
-    while(unshuffledDeck.length > 0) {
-        let randomNum = Math.floor(Math.random() * unshuffledDeck.length);
-        let randomCard = unshuffledDeck[randomNum];
-        unshuffledDeck.splice(randomNum, 1);
-        shuffledDeck.push(randomCard);
+    while(unshuffledCards.length > 0) {
+        let randomNum = Math.floor(Math.random() * unshuffledCards.length);
+        let randomCard = unshuffledCards[randomNum];
+        unshuffledCards.splice(randomNum, 1);
+        shuffledCards.push(randomCard);
     }
 
-    this.deck = shuffledDeck;
+    this.cards = shuffledCards;
 }
 
 module.exports = GameDeck;

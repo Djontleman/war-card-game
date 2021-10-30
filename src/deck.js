@@ -1,16 +1,16 @@
 // ====== Deck Class ====== //
 
 const Deck = function() {
-    this.deck = [];
+    this.cards = [];
     // this.numberOfCards = this.deck.length;
 }
 
 Deck.prototype.addCardToBottomOfDeck = function(card) {
-    this.deck.unshift(card);
+    this.cards.unshift(card);
 }
 
 Deck.prototype.removeCardFromTopOfDeck = function() {
-    return this.deck.pop();
+    return this.cards.pop();
 }
 
 module.exports = Deck;

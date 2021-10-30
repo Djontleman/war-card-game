@@ -3,7 +3,7 @@
 const Card = require("./card");
 
 const StandardDeck = function() {
-    this.standardDeck = [
+    this.cards = [
         new Card(1, "Hearts", "Ace"), 
         new Card(1, "Diamonds", "Ace"),
         new Card(1, "Spades", "Ace"), 
