@@ -46,16 +46,16 @@ const StandardDeck = function() {
         new Card(10, "Clubs", "10"),
         new Card(11, "Hearts", "Jack"), 
         new Card(11, "Diamonds", "Jack"), 
-        new Card(11, "Spades", "11"), 
-        new Card(11, "Clubs", "11"),
+        new Card(11, "Spades", "Jack"), 
+        new Card(11, "Clubs", "Jack"),
         new Card(12, "Hearts", "Queen"), 
         new Card(12, "Diamonds", "Queen"),
-        new Card(12, "Spades", "12"), 
-        new Card(12, "Clubs", "12"),
+        new Card(12, "Spades", "Queen"), 
+        new Card(12, "Clubs", "Queen"),
         new Card(13, "Hearts", "King"), 
         new Card(13, "Diamonds", "King"), 
-        new Card(13, "Spades", "13"), 
-        new Card(13, "Clubs", "13"),
+        new Card(13, "Spades", "King"), 
+        new Card(13, "Clubs", "King")
     ]
 }
 
