@@ -25,8 +25,15 @@ Game.prototype.start = function() {
 
     this.dealCards();
 
-    // i = 20;
+    console.log();
+    console.log("Game begins!");
+    console.log();
+
+    // i = 100;
     do {
+        // console.log(this.player1.deck);
+        // console.log(this.player2.deck);
+
         const stage = new Stage;
         const turn = new Turn(this.player1, this.player2, stage);
         turn.startTurn();
@@ -36,7 +43,10 @@ Game.prototype.start = function() {
         } else if (this.player2.deck.cards.length == 0) {
             this.winner = this.player1;
         } 
-        console.log(this.player2.deck.cards.length)
+        console.log("Player " + this.player1Number + "'s deck: " + this.player1.deck.cards.length);
+        console.log("Player " + this.player2Number + "'s deck: " + this.player2.deck.cards.length);
+
+        console.log();
         
         // i--;
         // if (i == 0) {
