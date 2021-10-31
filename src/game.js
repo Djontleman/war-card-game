@@ -1,3 +1,5 @@
+// ====== Game Class ====== //
+
 const Card = require("./card");
 const Deck = require("./deck");
 const StandardDeck = require("./standardDeck");
@@ -72,5 +74,4 @@ Game.prototype.dealCards = function() {
     }
 }
 
-const game = new Game;
-game.start();
+module.exports = Game;
