@@ -27,24 +27,24 @@ Game.prototype.start = function() {
 
     this.dealCards();
 
-    // const startState = [];
-    // for (card of this.player1.deck.cards) {
-    //     startState.push(card.value);
-    // }
-    // console.log(startState);
-    // return;
-
     console.log();
     console.log("Game begins!");
     console.log();
 
+    let numberOfTurns = 0;
+
     // i = 20;
     do {
-        // console.log(this.player1.deck);
-        // console.log(this.player2.deck);
+        if (numberOfTurns == 3000) {
+            console.log("An infinite loop has been reached!")
+            console.log("The game ends in a draw...")
+            return;
+        }
 
         const stage = new Stage;
         const turn = new Turn(this.player1, this.player2, stage);
+        numberOfTurns++;
+        console.log("Turn Number: " + numberOfTurns);
         turn.startTurn();
 
         if (this.player1.deck.cards.length == 0) {
@@ -56,22 +56,6 @@ Game.prototype.start = function() {
         console.log("Player " + this.player2Number + "'s deck: " + this.player2.deck.cards.length);
 
         console.log();
-
-        // const currentState = [];
-        // for (i = 0; i < currentState.length; i++) {
-        //     currentState.pop();
-        // }
-        // for (card of this.player1.deck.cards) {
-        // currentState.push(card.value);
-        // }
-        // console.log(startState);
-        // console.log(currentState);
-
-        if (currentState == startState) {
-            console.log("An infinite loop has been reached!")
-            console.log("The game ends in a draw...")
-            return;
-        }
         
         // i--;
         // if (i == 0) {
