@@ -38,12 +38,14 @@ Turn.prototype.startTurn = function() {
         do {
             if (this.player1.deck.cards.length < 4) {
                 for (card of this.player1.deck.cards) {
-                    this.stage.addCardToWarPile();
+                    this.stage.addCardToWarPile(card);
+                    this.player1.deck.removeCardFromTopOfDeck();
                 }
                 break;
             } else if (this.player2.deck.cards.length < 4) {
                 for (card of this.player2.deck.cards) {
-                    this.stage.addCardToWarPile();
+                    this.stage.addCardToWarPile(card);
+                    this.player2.deck.removeCardFromTopOfDeck();
                 }
                 break;
             } else {
